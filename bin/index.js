@@ -39,6 +39,7 @@ let userPkg = require(path.resolve(userDirectory, './package.json'));
   userPkg.scripts['lint:fix'] = 'eslint . --fix';
   userPkg.scripts.postpublish = 'pinst --disable';
   userPkg.scripts.prepublishOnly = 'pinst --enable';
+  userPkg.eslintConfig = { extends: ['clickwithclark'] };
 
   // update package.json with merged scripts
   try {
