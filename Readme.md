@@ -48,4 +48,4 @@ I work on a windows machine, to the best of my knowledge the package works on al
 
 Enjoy!
 
-[MIT](https://raw.githubusercontent.com/clickwithclark/clark-pack/main/LICENSE1)
+[MIT](https://raw.githubusercontent.com/clickwithclark/clark-pack/main/LICENSE)
