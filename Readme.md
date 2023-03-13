@@ -16,12 +16,14 @@ It automatically adds the following to my package.json scripts
 "postpublish": "pinst --disable",
 "prepublishOnly": "pinst --enable"
 ```
+
 It also installs all the npm dependencies I would need as well
 
 ```bash
 npm i -D @commitlint/cli@17.4.4 && npm i -D @commitlint/config-conventional@17.4.4 && npm i -D chalk@4.1.2 && npm i -D commitlint-with-husky@1.0.10 && npm i -D eslint-config-clickwithclark@3.2.4 && npm i -D husky@8.0.3 && npm i -D pinst@3.0.0 && npm i -D standard-version@9.5.0 && npm i -D terser-webpack-plugin@5.3.7 && npm i -D webpack-cli@4.10.0 && npm i -D webpack@5.76.1 && npx --yes husky install && npx --yes husky add .husky/commit-msg "npx --yes commitlint --edit \"$1\""
 
 ```
+
 You are very welcome to overwrite any of these settings, or just fork the entire thing to create your own.
 
 ## Installing/Usage
@@ -40,12 +42,10 @@ The configuration files will be added to your project copied from the package it
 
 4. It will then start installing all the dependencies and will notify when it is done
 
-
-
 ## Notice
 
 I work on a windows machine, to the best of my knowledge the package works on all platforms, if not please don't hesitate to let me know.
 
 Enjoy!
 
-[MIT](https://raw.githubusercontent.com/clickwithclark/clark-pack/main/LICENSE)
+[MIT](https://raw.githubusercontent.com/clickwithclark/clark-pack/main/LICENSE1)
