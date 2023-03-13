@@ -59,7 +59,6 @@ let userPkg = require(path.resolve(userDirectory, './package.json'));
   ];
 
   // move basic config files to user's project folder
-  console.log({ thisDirectory, userDirectory });
   copyFiles(thisDirectory, userDirectory, fileList)
     .then(() => {
       // since successful copy of files, rename dot-gitignore
