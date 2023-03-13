@@ -46,6 +46,6 @@ The configuration files will be added to your project copied from the package it
 
 I work on a windows machine, to the best of my knowledge the package works on all platforms, if not please don't hesitate to let me know.
 
-Enjoy!
+Enjoy! 
 
 [MIT](https://raw.githubusercontent.com/clickwithclark/clark-pack/main/LICENSE)
