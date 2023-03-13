@@ -2,14 +2,23 @@
   "name": "clark-pack",
   "version": "1.0.0",
   "description": "Bootstrapping my repo with files and configurations I always use, intended for personal use!",
-  "main": "index.js",
+  "main": "bin/index.js",
   "bin": {
     "clark-pack": "bin/index.js"
   },
+  "files": [
+    "bin",
+    "dot-gitignore",
+    ".commitlintrc.json",
+    "LICENSE",
+    "webpack.config.js",
+    "src"
+    
+  ],
   "scripts": {
     "build": "webpack",
-    "docs": "npx documentation build src/** -f md > README[sample].md",
-    "html": "npx documentation build src/** -f html -o docs",
+    "docs": "npx --yes documentation build src/** -f md > README[sample].md",
+    "html": "npx --yes documentation build src/** -f html -o docs",
     "release": "standard-version && git push --follow-tags origin main && npm publish",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -19,9 +28,16 @@
   "keywords": [],
   "author": "clickwithclark <clickwithclark@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2"
+  },
   "devDependencies": {
-    "eslint-config-clickwithclark": "^3.2.4",
+    "@commitlint/cli": "^17.0.1",
+    "@commitlint/config-conventional": "^17.0.0",
     "commitlint-with-husky": "^1.0.10",
+    "eslint-config-clickwithclark": "^3.2.4",
+    "husky": "^8.0.1",
+    "pinst": "^3.0.0",
     "standard-version": "^9.3.1",
     "terser-webpack-plugin": "^5.3.6",
     "webpack": "^5.52.1",
