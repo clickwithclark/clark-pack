@@ -57,6 +57,7 @@ let userPkg = require(path.resolve(userDirectory, './package.json'));
     './webpack.config.js',
     './dot-gitignore',
     './.commitlintrc.json',
+    './readme-template.md',
   ];
 
   // move basic config files to user's project folder
@@ -65,6 +66,10 @@ let userPkg = require(path.resolve(userDirectory, './package.json'));
       // since successful copy of files, rename dot-gitignore
       // to .gitignore, .gitignore files are renamed by npm
       // when packed see https://github.com/npm/npm/issues/1862
+
+      /* -------------------------------------------------------------------*/
+      // #region [Rename dot-gitignore to .gitignore]
+      /* -------------------------------------------------------------------*/
 
       fs.rename(
         path.join(userDirectory, './dot-gitignore'),
@@ -80,6 +85,31 @@ let userPkg = require(path.resolve(userDirectory, './package.json'));
           }
         }
       );
+
+      /* -------------------------------------------------------------------*/
+      // #endregion [Rename dot-gitignore to .gitignore]
+
+      /* -------------------------------------------------------------------*/
+      // #region [Rename readme-template.md to Readme.md]
+      /* -------------------------------------------------------------------*/
+
+      fs.rename(
+        path.join(userDirectory, './readme-template.md'),
+        path.join(userDirectory, './Readme.md'),
+        (error) => {
+          if (error) {
+            console.log(
+              chalk.bold.red(
+                'Error Occurred While Renaming "readme-template.md" file\n'
+              )
+            );
+            console.error(error);
+          }
+        }
+      );
+
+      /* -------------------------------------------------------------------*/
+      // #endregion [Rename readme-template.md to Readme.md]
 
       console.log(
         chalk.bold.green(

@@ -12,7 +12,8 @@
     ".commitlintrc.json",
     "LICENSE",
     "webpack.config.js",
-    "src"
+    "src",
+    "readme-template.md"
   ],
   "scripts": {
     "build": "webpack",
