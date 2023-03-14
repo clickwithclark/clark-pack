@@ -1,6 +1,6 @@
 {
   "name": "clark-pack",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Bootstrapping my repo with files and configurations I always use, intended for personal use!",
   "main": "bin/index.js",
   "bin": {
