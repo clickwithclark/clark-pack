@@ -20,7 +20,8 @@ const userDirectory = process.env.INIT_CWD;
 const thisDirectory = path.resolve(__dirname, '../');
 let userPkg = require(path.resolve(userDirectory, './package.json'));
 (function () {
-  const installationScript = String.raw`npm i -D @commitlint/cli@17.4.4 && npm i -D @commitlint/config-conventional@17.4.4 && npm i -D chalk@4.1.2 && npm i -D commitlint-with-husky@1.0.10 && npm i -D eslint-config-clickwithclark@3.2.4 && npm i -D husky@8.0.3 && npm i -D pinst@3.0.0 && npm i -D standard-version@9.5.0 && npm i -D terser-webpack-plugin@5.3.7 && npm i -D webpack-cli@4.10.0 && npm i -D webpack@5.76.1 && npx --yes husky install && npx --yes husky add .husky/commit-msg "npx --yes commitlint --edit \"$1\""`;
+  const installationScript = String.raw`npm i -D @commitlint/cli@17.4.4 @commitlint/config-conventional@17.4.4 chalk@4.1.2 commitlint-with-husky@1.0.10 eslint-config-clickwithclark@3.2.4 husky@8.0.3 pinst@3.0.0 standard-version@9.5.0 terser-webpack-plugin@5.3.7 webpack-cli@4.10.0 webpack@5.76.1 && npx --yes husky install && npx --yes husky add .husky/commit-msg "npx --yes commitlint --edit \"$1\""
+  `;
 
   console.log('this directory', thisDirectory);
   // shallow copy to avoid mutating user copy prematurely
