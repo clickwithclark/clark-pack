@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/clickwithclark/clark-pack/compare/v1.2.0...v1.2.1) (2024-05-28)
+
+
+### Bug Fixes
+
+* **/bin:** remove superfluous npm install commands ([22c6eca](https://github.com/clickwithclark/clark-pack/commit/22c6eca2718ed2ca2d388fa12b7dfb145600af51))
+
 ## [1.2.0](https://github.com/clickwithclark/clark-pack/compare/v1.1.2...v1.2.0) (2023-03-14)
 
 
