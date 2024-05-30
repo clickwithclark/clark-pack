@@ -2,6 +2,7 @@
   "name": "clark-pack",
   "version": "1.2.3",
   "description": "Bootstrapping my repo with files and configurations I always use, intended for personal use!",
+  "type": "module",
   "main": "bin/index.js",
   "bin": {
     "clark-pack": "bin/index.js"
@@ -21,9 +22,7 @@
     "html": "npx --yes documentation build src/** -f html -o docs",
     "release": "standard-version && git push --follow-tags origin main && npm publish",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "postpublish": "pinst --disable",
-    "prepublishOnly": "pinst --enable"
+    "lint:fix": "eslint . --fix"
   },
   "keywords": [],
   "author": "clickwithclark <clickwithclark@gmail.com>",
@@ -37,7 +36,6 @@
     "commitlint-with-husky": "^1.0.10",
     "eslint-config-clickwithclark": "^3.2.4",
     "husky": "^8.0.1",
-    "pinst": "^3.0.0",
     "standard-version": "^9.3.1",
     "terser-webpack-plugin": "^5.3.6",
     "webpack": "^5.52.1",

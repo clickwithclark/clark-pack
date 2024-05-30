@@ -8,19 +8,26 @@
  * @return {Void} Nothing is returned
  */
 
-const process = require('process');
-const fs = require('fs');
-const path = require('path');
-const { exec } = require('child_process');
+import process from 'process';
+import fs from 'fs';
+import path from 'path';
+import { exec } from 'child_process';
+import chalk from 'chalk';
+import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
 // eslint-disable-next-line import/no-extraneous-dependencies
-const chalk = require('chalk');
-const copyFiles = require('../src/copyFiles.js');
+import copyFiles from '../src/copyFiles.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const require = createRequire(import.meta.url);
 
 const userDirectory = process.env.INIT_CWD;
 const thisDirectory = path.resolve(__dirname, '../');
 let userPkg = require(path.resolve(userDirectory, './package.json'));
 (function () {
-  const installationScript = String.raw`npm i -D @commitlint/cli@17.4.4 @commitlint/config-conventional@17.4.4 chalk@4.1.2 commitlint-with-husky@1.0.10 eslint-config-clickwithclark@3.2.4 husky@8.0.3 pinst@3.0.0 standard-version@9.5.0 terser-webpack-plugin@5.3.7 webpack-cli@4.10.0 webpack@5.76.1 && npx --yes husky install && npx --yes husky add .husky/commit-msg "npx --yes commitlint --edit \"$1\""
+  const installationScript = String.raw`npm i -D @commitlint/cli@17.4.4 @commitlint/config-conventional@17.4.4 chalk@4.1.2 commitlint-with-husky@2.0.2 eslint-config-clickwithclark@3.2.4 husky@8.0.3 standard-version@9.5.0 terser-webpack-plugin@5.3.7 webpack-cli@4.10.0 webpack@5.76.1 && npx --yes husky install && npx --yes husky add .husky/commit-msg "npx --yes commitlint --edit \"$1\""
   `;
 
   console.log('this directory', thisDirectory);
@@ -38,8 +45,7 @@ let userPkg = require(path.resolve(userDirectory, './package.json'));
     'standard-version && git push --follow-tags origin main && npm publish';
   userPkg.scripts.lint = 'eslint .';
   userPkg.scripts['lint:fix'] = 'eslint . --fix';
-  userPkg.scripts.postpublish = 'pinst --disable';
-  userPkg.scripts.prepublishOnly = 'pinst --enable';
+
   userPkg.eslintConfig = { extends: ['clickwithclark'] };
 
   // update package.json with merged scripts

@@ -13,8 +13,6 @@ It automatically adds the following to my package.json scripts
 "release": "standard-version && git push --follow-tags origin main && npm publish",
 "lint": "eslint .",
 "lint:fix": "eslint . --fix",
-"postpublish": "pinst --disable",
-"prepublishOnly": "pinst --enable"
 ```
 
 It also installs all the npm dependencies I would need as well.
