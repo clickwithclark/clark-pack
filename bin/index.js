@@ -27,7 +27,7 @@ const userDirectory = process.env.INIT_CWD;
 const thisDirectory = path.resolve(__dirname, '../');
 let userPkg = require(path.resolve(userDirectory, './package.json'));
 (function () {
-  const installationScript = String.raw`npm i -D @commitlint/cli@17.4.4 @commitlint/config-conventional@17.4.4 chalk@4.1.2 commitlint-with-husky@2.0.2 eslint-config-clickwithclark@3.2.4 husky@8.0.3 standard-version@9.5.0 terser-webpack-plugin@5.3.7 webpack-cli@4.10.0 webpack@5.76.1 && npx --yes husky install && npx --yes husky add .husky/commit-msg "npx --yes commitlint --edit \"$1\""
+  const installationScript = String.raw`npm i -D @commitlint/cli@17.4.4 @commitlint/config-conventional@17.4.4 chalk@4.1.2 commitlint-with-husky@2.1.3 eslint-config-clickwithclark@3.2.4 husky@8.0.3 standard-version@9.5.0 terser-webpack-plugin@5.3.7 webpack-cli@4.10.0 webpack@5.76.1 && npx --yes husky install && npx --yes husky add .husky/commit-msg "npx --yes commitlint --edit \"$1\""
   `;
 
   console.log('this directory', thisDirectory);
